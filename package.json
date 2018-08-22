@@ -1,0 +1,16 @@
+{
+  "name": "graphql-kc",
+  "version": "0.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "wyatt",
+  "license": "MPL-2.0",
+  "dependencies": {
+    "graphi": "6.0.0",
+    "hapi": "17.5.3"
+  }
+}
