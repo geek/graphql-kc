@@ -4,6 +4,8 @@ const Fs = require('fs');
 const Path = require('path');
 const Graphi = require('graphi');
 const Hapi = require('hapi');
+const RandomName = require('random-name');
+
 
 const schema = Fs.readFileSync(Path.join(__dirname, 'schema1.gql'), 'utf8');
 
@@ -11,8 +13,8 @@ const resolvers = {
   getUser: ({ email }) => {
     return {
       email,
-      firstname: 'Billy',
-      lastname: 'Joel'
+      firstname: RandomName.first(),
+      lastname: RandomName.last()
     }
   }
 };
@@ -22,6 +24,7 @@ const main = async () => {
 
   await server.register({ plugin: Graphi, options: { schema, resolvers } });
   await server.start();
+  console.log('server started at http://localhost:8080');
 };
 
 main();

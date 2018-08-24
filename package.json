@@ -11,6 +11,7 @@
   "license": "MPL-2.0",
   "dependencies": {
     "graphi": "6.0.0",
-    "hapi": "17.5.3"
+    "hapi": "17.5.3",
+    "random-name": "0.1.2"
   }
 }
