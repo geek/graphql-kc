@@ -3,8 +3,8 @@ The basics and beyond
 
 
 # Wyatt Preul
-github.com/geek
-npmjs.com/~wyatt
+- github.com/geek
+- npmjs.com/~wyatt
 
 
 
@@ -151,3 +151,44 @@ query getUser($email1: String!, $email2: String!) {
 
 [server3.js]
 
+## Mutations
+
+- Same as a query from clients perspective
+- Specified as a different type: `Mutation`
+- Begin to use `Input` type
+
+
+## Mutation Schema
+
+```
+input UserInput {
+  email: String!
+  firstname: String!
+  lastname: String!
+}
+
+type Mutation {
+  createUser(user: UserInput!): User
+}
+```
+
+
+## Mutation Request [server4.js]
+
+```
+mutation {
+  createUser(user: {
+    email: "test@test.com"
+    firstname: "Foo"
+    lastname: "Bar"
+  }) {
+    id
+  }
+}
+```
+
+## Client Requests
+
+- No extra libraries required
+- Can ask for only data that is needed
+- See example under client/store
