@@ -192,3 +192,16 @@ mutation {
 - No extra libraries required
 - Can ask for only data that is needed
 - See example under client/store
+
+## Testing
+
+- test handlers like in REST
+- validate schemas with graphql parse
+- test queries with easygraphql-tester [see test/]
+
+
+## Summary
+
+- GraphQL is a powerful addition to your toolset
+- Useful when multiple client teams with varying constraints
+- Mature ecosystem that is easy to get started with

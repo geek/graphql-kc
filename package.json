@@ -16,5 +16,10 @@
     "inert": "5.1.0",
     "lodash": "4.17.10",
     "random-name": "0.1.2"
+  },
+  "devDependencies": {
+    "code": "5.2.0",
+    "easygraphql-tester": "0.0.7",
+    "lab": "16.0.0"
   }
 }
